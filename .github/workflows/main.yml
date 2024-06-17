@@ -17,6 +17,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            lucasbrasileiro/kube-news:v1
-            lucasbrasileiro/kube-news:latest
+            lucasnbrasileiro/kube-news:v1
+            lucasnbrasileiro/kube-news:latest
       
