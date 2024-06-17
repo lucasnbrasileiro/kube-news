@@ -1,4 +1,4 @@
-name: CI-CD
+ name: CI-CD
 
 on:
   push:
@@ -24,6 +24,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            lucasbrasileiro/kube-news:v1
+            lucasbrasileiro/kube-news:${{github.run_number}}
             lucasbrasileiro/kube-news:latest
       
