@@ -1,0 +1,22 @@
+name: CI-CD
+
+on:
+  push:
+    branches:  ["main"]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.7
+      - name: Construção de imagem Docker
+        uses: docker/build-push-action@v5.4.0
+        with:
+          context: ./src
+          file: ./src/Dockerfile
+          push: true
+          tags: |
+            lucasbrasileiro/kube-news:v1
+            lucasbrasileiro/kube-news:latest
+      
